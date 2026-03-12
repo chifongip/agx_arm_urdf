@@ -22,7 +22,7 @@
             </geometry>
         </collision>
     </link>
-    <joint name="gripper_flange" type="fixed">
+    <joint name="gripper_flange_joint" type="fixed">
         <origin xyz="0.032 0 -0.0235" rpy="-1.5708 0 -1.5708"/>
         <parent link="link7"/>
         <child link="gripper_flange"/>

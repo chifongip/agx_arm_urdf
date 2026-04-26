@@ -1,6 +1,10 @@
 <mujoco model="piper">
   <compiler angle="radian"/>
 
+  <default>
+    <joint frictionloss="0.3" armature="0.005"/>
+  </default>
+
   <asset>
     <mesh name="base_link" content_type="model/stl" file="../meshes/base_link.stl"/>
     <mesh name="link1" content_type="model/stl" file="../meshes/link1.stl"/>
@@ -64,4 +68,15 @@
       </body>
     </body>
   </worldbody>
+
+  <actuator>
+    <motor name="joint1" joint="joint1" gear="1" ctrlrange="-100 100"/>
+    <motor name="joint2" joint="joint2" gear="1" ctrlrange="-100 100"/>
+    <motor name="joint3" joint="joint3" gear="1" ctrlrange="-100 100"/>
+    <motor name="joint4" joint="joint4" gear="1" ctrlrange="-100 100"/>
+    <motor name="joint5" joint="joint5" gear="1" ctrlrange="-100 100"/>
+    <motor name="joint6" joint="joint6" gear="1" ctrlrange="-100 100"/>
+    <motor name="gripper_joint1" joint="gripper_joint1" gear="1" ctrlrange="-10 10"/>
+    <motor name="gripper_joint2" joint="gripper_joint2" gear="1" ctrlrange="-10 10"/>
+  </actuator>
 </mujoco>
